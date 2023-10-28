@@ -1,0 +1,106 @@
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:500;
+    color: antiquewhite;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width:700px) {
+
+    /* background-color:#F09F39; 
+    color: #7B160E;
+    background-color: #EFD37A; */
+
+body {
+    background-color: #F09F39;
+    color: #7B160E ;
+}
+
+
+.story-updates--heading {
+    font: 5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 3vw;
+    color: inherit;
+}
+
+    #story-container {
+        padding: 2vw;
+        color: inherit;
+        margin: 2vh 0 0 0;
+        color: #7B160E ;
+
+        #story-heading {
+            text-align: center;
+            color: inherit;
+            font-weight: bolder;
+        }
+        #story {
+            color: inherit;
+            text-align: center;
+            padding: 2vh 0;
+        }
+
+    }
+
+
+
+    #updates-heading {
+        text-align: center;
+        color: inherit;
+        font-weight: bolder;
+        margin: 2vh 0 0.5vh 0;
+
+    }
+    #updates-container {
+        padding:0 2vw;
+        color: inherit;
+        color: #7B160E ;
+     
+        .update-date {
+            color:inherit;
+            font-weight: bold;
+            text-underline-offset: 0.5vh;
+        }
+
+        .update {
+            text-align: center;
+            color: inherit;
+            padding: 2vh 0;
+            color: #7B160E;
+        }
+        
+        #readMore-updates {
+            color: #7B160E;
+        }
+    }
+
+
+    #gallery-heading {
+        color: #7B160E;
+        text-align: center;
+        font-weight:bold;
+        margin: 3vh 0 0 0;
+    }
+
+    #gallery-container--main {
+        padding: 2vw;
+
+        .gallery-title{
+            color: #7B160E;
+            text-align: center;
+            margin: 2vh 0 0 0;
+        }
+
+#slideshow1 {
+    width: 200px;
+    height: 150px;
+    background-color: #7B160E;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+}
+    }}
