@@ -10,10 +10,10 @@
 <!-- Optional Theme stylesheet -->
 <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
 
-<script src="subpageScript.js"></script>
 </head>
 
 <body>
+    <div id="page-container">
 
     <h1 class="story-updates--heading">The House of Hope Story and Updates</h1>
     <div id="story-container">
@@ -42,13 +42,25 @@
     </div>
 
     <h2 id="gallery-heading">Gallery</h2>
-    <div id="gallery-container--main">
-        <h3 class="gallery-title">Building</h3>
-        <button id="button" onclick="nextImage1()">Button</button>
-        <div id="slideshow1">
-
-        </div>
+    <!--
+     #image-slider = #slideshow 
+    .slider-image = .slideshow-item 
+    -->
+<div class="controls-cage">
+    <button id="prev"></button>
+<div id="slideshow-container" class="slideshow-container">
+   <div id="slideshow">
+    <img src="images/testimage1.jpg" alt="" class="slideshow-item">
+    <img src="images/testimage2.jpg" alt="" class="slideshow-item">
+    <img src="images/testimage3.jpg" alt="" class="slideshow-item">
+    <img src="images/testimage4.jpg" alt="" class="slideshow-item">
     </div>
+</div>
+<button id="next"></button>
+</div>
 
+</div>
+
+<script src="subpageScript.js"></script>
 </body>
 </html>

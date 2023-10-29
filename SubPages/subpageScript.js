@@ -1,52 +1,40 @@
 
+//slider = slideshow
+//currentImage = currentSlide
 
+const slideshow = document.getElementById("slideshow");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+// const imageWidth = document.querySelector('.slideshow-item').clientWidth;
+const imageWidth = 75;
 
-// function nextImage1(slideshow1) {
-//     var image = document.getElementById("slideshow1");
-//     for(var i = 0; i < imgArray1.length; i++) {
-//         if(imgArray1[i].src == image.src) {
-//             if (i === imgArray1.length){
-//                 document.getElementById("slideshow1").src = imgArray1[0].src;
-//                 break;
-//             }
-//             document.getElementById("slideshow1").src = imgArray1[i+1].src;
-//             break;
-//         }
-//             }
-//         }
-   
-// var imgArray1 = new Array();
+let currentSlide = 0;
 
-// imgArray1[0] = new Image();
-// imgArray1[0].src = "images/testimage1.jpg";
+next.addEventListener('click', () => {
+    currentSlide++;
+    if (currentSlide > slideshow.children.length - 1) {
+        currentSlide = 0;
+    }
+    updateSlideshow();
+});
 
-// imgArray1[1] = new Image();
-// imgArray1[1].src = "images/testimage2.jpg";
+prev.addEventListener('click', () => {
+    currentSlide--;
+    if (currentSlide < 0) {
+        currentSlide = slideshow.children.length - 1;
+    }
+    updateSlideshow();
+});
 
-// imgArray1[2] = new Image();
-// imgArray1[2].src = "images/testimage3.jpg";
-
-// imgArray1[3] = new Image();
-// imgArray1[3].src = "images/testimage4.jpg";
-// imgArray1[3] = "images/testimage4.jpg"
-// }
-
-
-
-function nextImage1() {
-    let imagesArray = ["images/testimage1.jpg","images/testimage2.jpg","images/testimage3.jpg"];
-
-    let image = document.getElementById("slideshow1");
-    let prevCounter = 0; // declare a variable to store the previous value of counter
-    let button = document.getElementById("button");
-    let counter = 0;
-    button.addEventListener("click", function blep() {
-        let counter = counter+1;
-        console.log(counter);
-    });
-    image.style.backgroundImage = "url(" + imagesArray[counter] + ")";
- 
+function updateSlideshow() {
+    var translateValue = -currentSlide * imageWidth;
+    slideshow.style.transform = `translateX(${translateValue}vw)`;
 }
 
 
+
+//Credits
+console.log(
+    "Next/Prev Icon credits:https://www.flaticon.com/authors/freepik"
+)
 
