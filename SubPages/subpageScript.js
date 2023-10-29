@@ -7,8 +7,12 @@ const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 // const imageWidth = document.querySelector('.slideshow-item').clientWidth;
 const imageWidth = 75;
-
 let currentSlide = 0;
+
+let length = slideshow.children.length;
+console.log(length);
+document.querySelector("#slideshow").style.width = length * imageWidth + "vw";
+
 
 next.addEventListener('click', () => {
     currentSlide++;
